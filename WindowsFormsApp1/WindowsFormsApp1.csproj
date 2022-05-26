@@ -50,18 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_student.Designer.cs">
-      <DependentUpon>Add_student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Check_student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Check_student.Designer.cs">
-      <DependentUpon>Check_student.cs</DependentUpon>
-    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -71,18 +59,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Show_list_students.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Show_list_students.Designer.cs">
-      <DependentUpon>Show_list_students.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Add_student.resx">
-      <DependentUpon>Add_student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Check_student.resx">
-      <DependentUpon>Check_student.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,9 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Show_list_students.resx">
-      <DependentUpon>Show_list_students.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pic\question.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
