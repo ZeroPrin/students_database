@@ -54,6 +54,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textbox_pa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -247,7 +249,7 @@
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(932, 257);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown3.Size = new System.Drawing.Size(54, 20);
             this.numericUpDown3.TabIndex = 34;
             // 
             // button4
@@ -278,12 +280,31 @@
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(1004, 297);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 18);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Сумма оплаты";
+            // 
+            // textbox_pa
+            // 
+            this.textbox_pa.Location = new System.Drawing.Point(1007, 318);
+            this.textbox_pa.Name = "textbox_pa";
+            this.textbox_pa.Size = new System.Drawing.Size(109, 20);
+            this.textbox_pa.TabIndex = 38;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1157, 499);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textbox_pa);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
@@ -348,6 +369,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textbox_pa;
     }
 }
 

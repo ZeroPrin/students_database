@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            numericUpDown3.Maximum = 3000;
+
             ToolTip toolTip1 = new ToolTip();
 
             toolTip1.AutoPopDelay = 5000;
@@ -47,6 +49,7 @@ namespace WindowsFormsApp1
             listView1.Columns.Add("Паспорт");
             listView1.Columns.Add("Курс");
             listView1.Columns.Add("Группа");
+            listView1.Columns.Add("Сумма оплаты");
 
             DB db = new DB();
 
@@ -75,6 +78,7 @@ namespace WindowsFormsApp1
                         Convert.ToString(reader.GetString("passport")),
                         Convert.ToString(reader.GetString("year")),
                         Convert.ToString(reader.GetString("n_group")),
+                        Convert.ToString(reader.GetString("payment_amount")),
                         });
                         listView1.Items.Add(item);
                     }
@@ -118,6 +122,7 @@ namespace WindowsFormsApp1
                         Convert.ToString(reader.GetString("passport")),
                         Convert.ToString(reader.GetString("year")),
                         Convert.ToString(reader.GetString("n_group")),
+                        Convert.ToString(reader.GetString("payment_amount")),
                         });
                         listView1.Items.Add(item);
                     }
@@ -162,9 +167,9 @@ namespace WindowsFormsApp1
 
             DB db = new DB();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `students_bkt` (`name`, `surname`, `patronymic`, `birthday`, `passport`, `year`, `n_group`) VALUES (@name, @surname, @patronymic, @birthday, @passport, @year, @n_group);", db.get_connection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `students_bkt` (`name`, `surname`, `patronymic`, `birthday`, `passport`, `year`, `n_group`, `payment_amount`) VALUES (@name, @surname, @patronymic, @birthday, @passport, @year, @n_group, @payment_amount);", db.get_connection());
 
-            string birthday = numericUpDown1.Value.ToString() + numericUpDown2.Value.ToString() + numericUpDown3.Value.ToString();
+            string birthday = numericUpDown1.Value.ToString() + "/" + numericUpDown2.Value.ToString() + "/" + numericUpDown3.Value.ToString();
 
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = textbox_name.Text;
             command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = textbox_surname.Text;
@@ -173,6 +178,7 @@ namespace WindowsFormsApp1
             command.Parameters.Add("@passport", MySqlDbType.VarChar).Value = textbox_pass.Text;
             command.Parameters.Add("@year", MySqlDbType.VarChar).Value = textbox_year.Text;
             command.Parameters.Add("@n_group", MySqlDbType.VarChar).Value = textbox_group.Text;
+            command.Parameters.Add("@payment_amount", MySqlDbType.VarChar).Value = textbox_pa.Text;
 
             db.open_connection();
 
